@@ -10,7 +10,7 @@ function Header()
                   class="rounded-full h-14 w-14 animate-horizontal-spin"
                 />
   </div>
-  <span className="text-3xl text-white-800 pt-8">Gully scorer</span>
+  <span className="font-Blaka text-5xl text-white-800 pt-6">Gully scorer</span>
   </div>
     </>
 }

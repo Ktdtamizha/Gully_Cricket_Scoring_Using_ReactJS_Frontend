@@ -7,8 +7,10 @@ export default {
   theme: {
     extend: {},
     fontFamily: {
-      'display': ['Oswald'],
-      'body': ['"Open Sans"'],
+      roboto: ['Roboto', 'sans-serif'],
+      Blaka: ['Blaka','sans-serif'],
+      Bangers: ['Bangers','sans-serif'],
+      Knewave :['Knewave','sans-serief'],
     }
   },
   plugins: [require('@tailwindcss/forms'),

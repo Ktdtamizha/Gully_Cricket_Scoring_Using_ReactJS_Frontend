@@ -63,45 +63,46 @@ function Button()
 
     return (<>
     <div style={{display:content ? 'none':'block'}}>
-            <div className="font-display italic text-3xl text-center text-green-500 mb-5 font-semibold mt-5">
+            <div className="font-Bangers  text-3xl text-center text-green-500 mb-5 mt-5">
                 <h1>{team1} VS {team2}</h1>
             
-                <p className="text-center text-xl">{toss} Won the toss Choose to {choose}</p>
+                <p className=" text-center text-xl">{toss} Won the toss Choose to {choose}</p>
             </div>
             <br/>
-            <h2 className="text-center text-3xl">{bat} {runs}/{wicket} - {balls} Balls</h2>
-        <div class="grid grid-cols-3 grid-rows-4 gap-20 rounded-xl max-w-md mx-auto mt-24">
-            <div class="btn btn-circle bg-indigo-900 hover:bg-indigo-600">
-                <button onClick={handleclick} value={1} class="text-2xl text-white-700 font-bold rounded-xl">1</button>
+            <h2 className="font-Bangers text-center text-3xl">({bat}) {runs}/{wicket} - {balls} Balls</h2>
+        <div class="flex flex-wrap rounded-xl bg-gray-300 max-w-md mx-auto mt-20">
+            <div class="w-1/3">
+                <button onClick={handleclick} value={1} class="w-full h-20 text-2xl text-gray-700 font-bold rounded-xl hover:bg-gray-400">1</button>
             </div>
-            <div class="btn btn-circle bg-indigo-900 hover:bg-indigo-600">
-                <button onClick={handleclick} value={2} class="text-2xl text-white-700 font-bold rounded-xl">2</button>
+            <div class=" w-1/3">
+                <button onClick={handleclick} value={2} class="w-full h-20 text-2xl text-gray-700 font-bold rounded-xl hover:bg-gray-400">2</button>
             </div>
-            <div class="btn btn-circle bg-indigo-900 hover:bg-indigo-600">
-                <button onClick={handleclick} value={3} class=" text-2xl text-white-700 font-bold rounded-xl">3</button>
+            <div class="  w-1/3">
+                <button onClick={handleclick} value={3} class=" w-full h-20 text-2xl text-gray-700 font-bold rounded-xl hover:bg-gray-400">3</button>
             </div>
-            <div class="btn btn-circle bg-indigo-900 hover:bg-indigo-600">
-                <button onClick={handleclick} value={4} class=" text-2xl text-white-700 font-bold rounded-xl">4</button>
+            <div class="  w-1/3">
+                <button onClick={handleclick} value={4} class=" w-full h-20 text-2xl text-gray-700 font-bold rounded-xl hover:bg-gray-400">4</button>
             </div>
-            <div class="btn btn-circle bg-indigo-900 hover:bg-indigo-600">
-                <button onClick={handleclick} value={5} class=" text-2xl text-white-700 font-bold rounded-xl">5</button>
+            <div class="  w-1/3">
+                <button onClick={handleclick} value={5} class=" w-full h-20 text-2xl text-gray-700 font-bold rounded-xl hover:bg-gray-400">5</button>
             </div>
-            <div class="btn btn-circle bg-indigo-900 hover:bg-indigo-600">
-                <button onClick={handleclick} value={6} class=" text-2xl text-white-700 font-bold rounded-xl">6</button>
+            <div class="  w-1/3">
+                <button onClick={handleclick} value={6} class=" w-full h-20 text-2xl text-gray-700 font-bold rounded-xl hover:bg-gray-400">6</button>
             </div>
-            <div class="btn btn-circle bg-indigo-900 hover:bg-indigo-600">
-                <button onClick={handlewicket} class=" text-2xl text-white-700 font-bold rounded-xl">W</button>
+            <div class=" w-1/3">
+                <button onClick={handleclick} value={0} class=" w-full h-20 text-2xl text-gray-700 font-bold rounded-xl hover:bg-gray-400">0</button>
             </div>
-            <div class="btn btn-circle bg-indigo-900 hover:bg-indigo-600">
-                <button onClick={handlenoball} class=" text-2xl text-white-700 font-bold rounded-xl">NB</button>
+            <div class="  w-1/3">
+                <button onClick={handlenoball} class=" w-full h-20 text-2xl text-gray-700 font-bold rounded-xl hover:bg-gray-400">NB</button>
             </div>
-            <div class="btn btn-circle bg-indigo-900 hover:bg-indigo-600">
-                <button onClick={handlewide} value={1} class=" text-2xl text-white-700 font-bold rounded-xl">WD</button>
+            <div class=" w-1/3">
+                <button onClick={handlewide} value={1} class=" w-full h-20 text-2xl text-gray-700 font-bold rounded-xl hover:bg-gray-400">WD</button>
             </div>
-            <div class="btn btn-circle col-start-2 col-end-3 bg-indigo-900 hover:bg-indigo-600">
-                <button onClick={handleclick} value={0} class=" text-2xl text-white-700 font-bold rounded-xl">0</button>
+            <div class="w-96 pl-16">
+                <button onClick={handlewicket} class=" w-full h-20 text-2xl text-gray-700 font-bold rounded-xl hover:bg-gray-400">WICKET</button>
             </div>
         </div>
+
 </div>
     <div class="grid grid-col-4 mt-10 pr-10">
     <button onClick={handlened} className=" col-start-1 col-end-2 w-full font-display italic text-3xl text-center text-green-500 mb-5 font-semibold mt-5">End Innings</button>
