@@ -7,14 +7,21 @@ function EndInnings()
     if(won == "draw")
     {
         return (<>
-            <h1 className="font-display italic text-3xl text-center text-green-500 mb-5 font-semibold mt-5">Match Draw !!!!</h1>
+            <div class="w-screen h-screen flex justify-center items-center bg-black dark:bg-white ">
+                <h1
+                class="relative w-full xl:text-9xl md:text-8xl text-5xl sm:tracking-[17px] tracking-[10px] uppercase text-center leading-[0.70em] outline-none animate-dimlight box-reflect">
+                Match Draw!!!</h1>
+            </div>
         </>);
     }
     else{
         return (
             <>
-            <h1 className="font-display italic text-3xl text-center text-green-500 mb-5 font-semibold mt-5">Won by {won}</h1>
-            </>
+           <div class="w-screen h-screen flex justify-center items-center bg-black dark:bg-white ">
+                <h1
+                class="relative w-full xl:text-9xl md:text-8xl text-5xl sm:tracking-[17px] tracking-[10px] uppercase text-center leading-[0.70em] outline-none animate-dimlight box-reflect">
+                Won By {won}</h1>
+            </div>            </>
         );
     }
 }
