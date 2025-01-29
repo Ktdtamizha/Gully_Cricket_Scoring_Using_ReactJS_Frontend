@@ -10,10 +10,10 @@ function Button()
     const [runs,setruns] = useState(0);
     const [wicket,setwicket] = useState(0);
     const [content, setContent] = useState(false);
+    const [balls,setballs] = useState(over*6);
     const navigate = useNavigate();
 
     var bat,bowl;
-    const [balls,setballs] = useState(over*6);
     
     if((toss == team1 && choose=="Bat") || (toss == team2 && choose=="Bowl"))
     {
