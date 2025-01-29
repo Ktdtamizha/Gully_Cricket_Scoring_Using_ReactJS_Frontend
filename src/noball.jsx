@@ -45,7 +45,17 @@ function Noball()
                 won = bat;
                 navigate("/endinnings",{state:{won}});
             }
-        },[target,balls]);
+            else if(target >=2 && wicket >9)
+            {
+                won = bat;
+                navigate("/endinnings",{state:{won}});
+            }
+            else if(target == 1 && wicket ==9)
+            {
+                won = "draw";
+                navigate("/endinnings",{state:{won}});
+            }
+        },[target,balls,wicket]);
         
     const handlewicket = (e) => {
         setwicket(w=>w+1);

@@ -43,7 +43,7 @@ function Button()
     const handlewicket = (e) => {
         setwicket(w=>w+1);
         setballs(b=>b-1);
-        if(wicket == 10 || balls == 1)
+        if(wicket == 9 || balls == 1)
         {
             setContent(true);
         }
