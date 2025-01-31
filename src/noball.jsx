@@ -12,7 +12,7 @@ function Noball()
     const[target,settarget] = useState(runs+1);
     const[chase,setchase] = useState(0);
     const[balls,setballs] = useState(over*6);
-    var won = "draw";
+    var won = "Draw";
     
     const handleclick = (e) => {
         setchase(chase=>Number(chase)+Number(e.target.value));
@@ -33,27 +33,27 @@ function Noball()
             if(chase == runs  && balls == 0)
                 {
                     won = "draw";
-                    navigate("/endinnings",{state:{won}});
+                    navigate("/endinnings",{state:{won,bat,bowl}});
                 }
             else if(target <= 0 && balls >=0)
             {
                 won = bowl;
-                navigate("/endinnings",{state:{won}});
+                navigate("/endinnings",{state:{won,bat,bowl}});
             }
             else if(balls<=0  && target >=2)
             {
                 won = bat;
-                navigate("/endinnings",{state:{won}});
+                navigate("/endinnings",{state:{won,bat,bowl}});
             }
             else if(target >=2 && wicket >9)
             {
                 won = bat;
-                navigate("/endinnings",{state:{won}});
+                navigate("/endinnings",{state:{won,bat,bowl}});
             }
             else if(target == 1 && wicket ==9)
             {
                 won = "draw";
-                navigate("/endinnings",{state:{won}});
+                navigate("/endinnings",{state:{won,bat,bowl}});
             }
         },[target,balls,wicket]);
         

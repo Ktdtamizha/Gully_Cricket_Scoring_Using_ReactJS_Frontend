@@ -3,6 +3,7 @@ import Button from "./button"
 import React  from "react"; 
 import Noball from "./noball";
 import EndInnings from "./endinnings";
+import Show from "./show";
 
 
 import { BrowserRouter as Router,Routes,Route } from "react-router-dom";
@@ -16,6 +17,7 @@ function App() {
         <Route path="/display" element={<Button/>}></Route>
         <Route path="/innings2" element={<Noball/>}></Route>
         <Route path="/endinnings" element={<EndInnings/>}></Route>
+        <Route path="/show" element={<Show/>}></Route>
       </Routes>
     </Router>
   );
