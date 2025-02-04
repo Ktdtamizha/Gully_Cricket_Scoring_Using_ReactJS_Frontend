@@ -17,6 +17,22 @@ function Show() {
             .catch((err) => console.log(err));
     }, []);
 
+    const handleUpdate = (id) =>{
+
+        navigate(`/updateteam/${id}`);
+    }
+
+
+    const deletematch = (id) =>
+    {
+        axios
+        .delete("http://localhost:3000/" + id)
+        .then((res) => {console.log(res);
+        window.location.reload();
+    })
+        .catch((err) => console.log(err))
+    }
+
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white p-4">
             <h1 className="text-3xl font-bold mb-6">Match Results</h1>
@@ -27,6 +43,7 @@ function Show() {
                             <th className="border border-gray-600 px-4 py-2">Team 1</th>
                             <th className="border border-gray-600 px-4 py-2">Team 2</th>
                             <th className="border border-gray-600 px-4 py-2">Result</th>
+                            <th className="border border-gray-600 px-4 py-2">Edit</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -36,6 +53,12 @@ function Show() {
                                     <td className="border border-gray-600 px-4 py-2">{t.team1}</td>
                                     <td className="border border-gray-600 px-4 py-2">{t.team2}</td>
                                     <td className="border border-gray-600 px-4 py-2">{t.result}</td>
+                                    <td className="border border-gray-600 px-4 py-2">
+                                        <div className="">
+                                        <button onClick={() => handleUpdate(t._id)} className="btn btn-success">Update</button>
+                                        <button onClick={() =>deletematch(t._id)} className="btn">Delete</button>
+                                        </div>
+                                    </td>
                                 </tr>
                             ))
                         ) : (
@@ -48,7 +71,9 @@ function Show() {
                     </tbody>
                 </table>
             </div>
+            
             <button onClick={navhome} className="btn btn-secondary mt-6 ml-6">Home</button>
+            
         </div>
     );
 }
