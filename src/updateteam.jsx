@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 
@@ -9,13 +9,6 @@ function UpdateTeam() {
     const [team2,setteam2] = useState("");
     const [result,setresult] = useState("");
 
-    useEffect( () => {
-        axios
-        .get(`http://localhost:3000${id}`)
-        .then((res) => setresult(res.data.result))
-        .catch((err) => console.log(err))
-    },[id]);
-
     const handleUpdate = (e) =>{
         e.preventDefault();
         axios
@@ -24,9 +17,7 @@ function UpdateTeam() {
             navigate('/show');
         })
         .catch((err) => console.log(err))
-
     }
-
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white p-4">
